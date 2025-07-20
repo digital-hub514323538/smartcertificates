@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        fieldset {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #020229;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        fieldset {
+            background-color: rgb(142, 214, 243);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #188aa4;
+            padding: 30px 40px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            text-align: center;
+            color: #333;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            color: #050505;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+            color: #f6f6f6;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 45%;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        button[type="button"] {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        button[type="button"]:hover {
+            background-color: #5a6268;
+        }
+
+            /* 
+        HEADER SECTION
+        */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            position: absolute;
+            top: 0;
+           left: 0;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .site-title {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 15px;
+            letter-spacing: 1px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .site-title {
+                font-size: 18px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 13px;
+            }
+
+            button {
+                font-size: 13px;
+            }
+
+            fieldset {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <div class="header">
+         <div class="logo">
+             <img src="logo.jpeg" alt="Website Logo">
+         </div>
+        <div class="site-title">Smart Certificates</div>
+    </div>
+
+    <fieldset>
+        <h3>Login</h3>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #020229;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+        
+            h1 {
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                margin-bottom: 20px;
+                color: #050505;
+            }
+        
+            form {
+                width: 100%;
+                max-width: 400px;
+            }
+        
+            fieldset {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 30px;
+                background-color: #d0d5d5;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        
+            legend {
+                font-size: 1.2em;
+                font-weight: bold;
+                color: #030303;
+                padding: 0 10px;
+            }
+        
+            label {
+                display: block;
+                margin-top: 15px;
+                color: #333;
+                font-weight: 500;
+            }
+        
+            input[type="text"],
+            input[type="date"],
+            input[type="tel"] {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                font-size: 14px;
+            }
+        
+            .gender-group {
+                margin-top: 10px;
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+        
+            .gender-group label {
+                font-weight: normal;
+            }
+        
+            button {
+                width: 45%;
+                padding: 10px;
+                margin-top: 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            button:first-of-type {
+                background-color: #6c757d;
+                color: white;
+                margin-right: 4%;
+            }
+        
+            button:first-of-type:hover {
+                background-color: #5a6268;
+            }
+        
+            button:last-of-type {
+                background-color: #007bff;
+                color: white;
+            }
+        
+            button:last-of-type:hover {
+                background-color: #0056b3;
+            }
+                /* 
+        HEADER SECTION
+        */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            position: absolute;
+            top: 0;
+           left: 0;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .site-title {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 15px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            .site-title {
+                font-size: 18px;
+            }
+
+            .logo img {
+                width: 45px;
+                height: 45px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            button {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .gender-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        </style>
+    </head>
+    <body>
+
+          <!-- HEADER -->
+         <div class="header">
+             <div class="logo">
+                 <img src="logo.jpeg" alt="Website Logo">
+             </div>
+            <div class="site-title">Smart Certificates</div>
+        </div>
+        <form>
+            <fieldset>
+                <h3 align="center">Registration</h3>        
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname">
+        
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname">
+        
+                <label for="dob">DOB:</label>
+                <input type="date" id="dob" name="dob">
+        
+                <label for="mobile">Mobile No:</label>
+                <input type="tel" id="mobile" name="mobile" maxlength="10">
+        
+                <label>Gender:</label>
+                <div class="gender-group">
+                    <label><input type="radio" name="gen" value="male"> Male</label>
+                    <label><input type="radio" name="gen" value="female"> Female</label>
+                </div>
+        
+                <button type="reset">Reset</button>
+                <button type="submit" onclick="sub()">Submit</button>
+            </fieldset>
+        </form>
+        <script>
+            function sub() {
+            window.location.href = "welcome.html";
+        }
+        </script>
+    </body>
+</html>
