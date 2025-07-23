@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Certificates by Category</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-image: url('path/to/your/image.jpg');
+      background-repeat: no-repeat;      
+      background-size: cover;            
+      background-position: center center;
+      background-attachment: fixed;       
+    }
+
+    h2 {
+      margin: 20px 0 10px 10px;
+      font-weight: 600;
+    }
+
+    .category-section {
+      margin-bottom: 40px;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 10px 10px 10px 10px;
+      scrollbar-width: thin;
+      scrollbar-color: #888 transparent;
+    }
+
+    /* Webkit scrollbar styling */
+    .scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    .scroll-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 4px;
+    }
+
+    .certificate-card {
+      flex: 0 0 auto; /* Prevent shrinking, only width as specified */
+      width: 280px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .certificate-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    }
+
+    .certificate-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .certificate-title {
+      padding: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      color: #222;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Certificates by Category</h1>
+  <section class="category-section">
+    <h2>Academic Certificate</h2>
+    <div class="scroll-container">
+      <div class="certificate-card">
+        <img src="certificates/python.jpg" alt="Python Certificate" />
+        <div class="certificate-title">Python Programming - 2024</div>
+      </div>
+      <div class="certificate-card">
+        <img src="certificates/javascript.jpg" alt="JavaScript Certificate" />
+        <div class="certificate-title">JavaScript Mastery - 2023</div>
+      </div>
+      <div class="certificate-card">
+        <img src="certificates/java.jpg" alt="Java Certificate" />
+        <div class="certificate-title">Java Basics - 2022</div>
+      </div>
+	  <div class="certificate-card">
+        <img src="certificates/java.jpg" alt="Java Certificate" />
+        <div class="certificate-title">Java Basics - 2022</div>
+      </div>
+	  <div class="certificate-card">
+        <img src="certificates/java.jpg" alt="Java Certificate" />
+        <div class="certificate-title">Java Basics - 2022</div>
+      </div>
+	  <div class="certificate-card">
+        <img src="certificates/java.jpg" alt="Java Certificate" />
+        <div class="certificate-title">Java Basics - 2022</div>
+      </div>
+      <!-- Add more programming certificates -->
+    </div>
+  </section>
+  <section class="category-section">
+    <h2>Extra-Curriculars</h2>
+    <div class="scroll-container">
+      <div class="certificate-card">
+        <img src="certificates/photoshop.jpg" alt="Photoshop Certificate" />
+        <div class="certificate-title">Photoshop Expert - 2024</div>
+      </div>
+      <div class="certificate-card">
+        <img src="certificates/ui-ux.jpg" alt="UI/UX Certificate" />
+        <div class="certificate-title">UI/UX Fundamentals - 2023</div>
+      </div>
+      <!-- Add more design certificates -->
+    </div>
+  </section>
+
+  <section class="category-section">
+    <h2>Internships</h2>
+    <div class="scroll-container">
+      <div class="certificate-card">
+        <img src="certificates/ai.jpg" alt="AI Certificate" />
+        <div class="certificate-title">AI Fundamentals - 2025</div>
+      </div>
+      <div class="certificate-card">
+        <img src="certificates/datascience.jpg" alt="Data Science Certificate" />
+        <div class="certificate-title">Data Science Basics - 2023</div>
+      </div>
+      <!-- Add more AI & Data Science certificates -->
+    </div>
+  </section>
+  
+  <section class="category-section">
+    <h2>Documents</h2>
+    <div class="scroll-container">
+      <div class="certificate-card">
+        <img src="certificates/ai.jpg" alt="AI Certificate" />
+        <div class="certificate-title">AI Fundamentals - 2025</div>
+      </div>
+      <div class="certificate-card">
+        <img src="certificates/datascience.jpg" alt="Data Science Certificate" />
+        <div class="certificate-title">Data Science Basics - 2023</div>
+      </div>
+      <!-- Add more AI & Data Science certificates -->
+    </div>
+  </section>
+<section class="category-section">
+    <h2>Achievements</h2>
+    <div class="scroll-container">
+      <div class="certificate-card">
+        <img src="certificates/ai.jpg" alt="AI Certificate" />
+        <div class="certificate-title">AI Fundamentals - 2025</div>
+      </div>
+      <div class="certificate-card">
+        <img src="certificates/datascience.jpg" alt="Data Science Certificate" />
+        <div class="certificate-title">Data Science Basics - 2023</div>
+      </div>
+      <!-- Add more AI & Data Science certificates -->
+    </div>
+  </section>
+</body>
+</html>
