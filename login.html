@@ -164,9 +164,15 @@
             <input type="text" id="username" name="username"><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password"><br><br>
-            <button type="submit">Submit</button>
+            <button type="submit" onclick="sub(event)">Submit</button>
             <button type="reset">Reset</button>
         </form>
     </fieldset>
+    <script>
+        function sub(event) {
+    event.preventDefault();  // Prevent form from submitting normally
+    window.location.href = "home.html";
+}
+    </script>
 </body>
 </html>
