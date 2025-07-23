@@ -191,13 +191,16 @@
                 </div>
         
                 <button type="reset">Reset</button>
-                <button type="submit" onclick="sub()">Submit</button>
+               <button type="submit" onclick="sub(event)">Submit</button>
+
             </fieldset>
         </form>
         <script>
-            function sub() {
-            window.location.href = "home.html";
-        }
+          function sub(event) {
+    event.preventDefault();  // Prevent form from submitting normally
+    window.location.href = "home.html";
+}
+
         </script>
     </body>
 </html>
