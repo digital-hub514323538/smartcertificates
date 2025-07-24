@@ -1,108 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificates Dashboard</title>
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificates Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-    display: flex;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-}
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background-color: #ecf0f1;
+    }
 
-.sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
+    .sidebar {
+      width: 250px;
+      background-color: #2c3e50;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      transition: all 0.3s ease-in-out;
+    }
 
-.user-account {
-    text-align: center;
-    margin-bottom: 30px;
-}
+    .user-account {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-.user-account img {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-}
+    .user-account img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s ease-in-out;
+    }
 
-.user-account h3 {
-    margin-top: 10px;
-    font-size: 18px;
-}
+    .user-account img:hover {
+      transform: scale(1.1);
+    }
 
-.user-account p {
-    font-size: 14px;
-    color: #ccc;
-}
+    .user-account h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+    .user-account p {
+      font-size: 14px;
+      color: #ccc;
+    }
 
-.menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-.menu a:hover {
-    background-color: #34495e;
-}
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+    }
 
-.main-content {
-    flex: 1;
-    padding: 40px;
-    background-color: #ecf0f1;
-}
+    .menu a:hover {
+      background-color: #34495e;
+      transform: translateX(5px);
+      cursor: pointer;
+    }
 
-.main-content h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
+    .menu a.active {
+      background-color: #1abc9c;
+      font-weight: bold;
+    }
 
-.main-content p {
-    font-size: 18px;
-    color: #333;
-}
+    .main-content {
+      flex: 1;
+      padding: 40px;
+      background-color: #ecf0f1;
+      transition: all 0.3s ease;
+    }
 
-    </style>
+    .main-content h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .main-content p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .main-content:hover {
+      background-color: #e5ebee;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    }
+  </style>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="user-account">
-            <img src="https://via.placeholder.com/60" alt="User Avatar">
-            <h3>John Doe</h3>
-            <p>@johndoe</p>
-        </div>
-        <nav class="menu">
-            <a href="home.html">🏆 Create Certificate</a>
-            <a href="draft.html">📂 My Certificates</a>
-            <a href="#">💡 Suggestions</a>
-            <a href="#">📞 Contact</a>
-            <a href="#">❓ Help</a>
-        </nav>
+  <div class="sidebar">
+    <div class="user-account">
+      <img src="https://via.placeholder.com/60" alt="User Avatar" />
+      <h3>John Doe</h3>
+      <p>@johndoe</p>
     </div>
+    <nav class="menu">
+      <a href="home.html" class="active">🏆 Create Certificate</a>
+      <a href="draft.html">📂 My Certificates</a>
+      <a href="#">💡 Suggestions</a>
+      <a href="#">📞 Contact</a>
+      <a href="#">❓ Help</a>
+    </nav>
+  </div>
 
-    <div class="main-content">
-        <h1>Welcome to Certificate Hub</h1>
-        <p>Select an option from the sidebar to get started.</p>
-    </div>
+  <div class="main-content">
+    <h1>Welcome to Certificate Hub</h1>
+    <p>Select an option from the sidebar to get started.</p>
+  </div>
 </body>
 </html>
