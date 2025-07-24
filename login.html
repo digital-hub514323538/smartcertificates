@@ -3,15 +3,10 @@
 <head>
     <title>Smart Certificates Login</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+        * {
+            box-sizing: border-box;
         }
-        fieldset {
-            display: inline-block;
-            margin-top: 50px;
-            padding: 20px;
-        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #020229;
@@ -20,36 +15,56 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
 
-        fieldset {
-            background-color: rgb(142, 214, 243);
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #188aa4;
-            padding: 30px 40px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-
-        h1 {
-            position: absolute;
-            top: 40px;
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            text-align: center;
-            color: #333;
+            background-color: #020229;
+            z-index: 1000;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .site-title {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 15px;
+            letter-spacing: 1px;
         }
 
         h3 {
             margin-bottom: 20px;
-            color: #050505;
+            color: #ffffff;
+        }
+
+        fieldset {
+            background-color: #188aa4;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 30px 40px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-top: 100px;
+            color: white;
         }
 
         label {
             display: block;
             margin: 10px 0 5px;
             text-align: left;
-            color: #f6f6f6;
         }
 
         input[type="text"],
@@ -60,7 +75,6 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 14px;
-            box-sizing: border-box;
         }
 
         button {
@@ -83,40 +97,13 @@
             background-color: #0056b3;
         }
 
-        button[type="button"] {
+        button[type="reset"] {
             background-color: #6c757d;
             color: white;
         }
 
-        button[type="button"]:hover {
+        button[type="reset"]:hover {
             background-color: #5a6268;
-        }
-
-            /* 
-        HEADER SECTION
-        */
-        .header {
-            display: flex;
-            align-items: center;
-            padding: 20px 40px;
-            position: absolute;
-            top: 0;
-           left: 0;
-        }
-
-        .logo img {
-            width: 60px;
-            height: 60px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .site-title {
-            color: #ffffff;
-            font-size: 24px;
-            font-weight: bold;
-            margin-left: 15px;
-            letter-spacing: 1px;
         }
 
         @media screen and (max-width: 600px) {
@@ -144,48 +131,55 @@
 
             fieldset {
                 padding: 20px;
+                width: 90%;
             }
         }
     </style>
 </head>
 <body>
 
-     <div class="header">
-         <div class="logo">
-             <img src="logo.jpeg" alt="Website Logo">
-         </div>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Website Logo">
+        </div>
         <div class="site-title">Smart Certificates</div>
     </div>
 
+    <!-- Login Form -->
     <fieldset>
-        <h3>Login</h3>
-        <form>
+        <h3 align="center">Login</h3>
+        <form onsubmit="sub(event)">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br>
-            
+            <input type="text" id="username" name="username" required>
+
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            
-            <button type="submit" onclick="sub(event)">Submit</button>
-            
-            <button type="reset">Reset</button>
+            <input type="password" id="password" name="password" required>
+
+            <div style="display: flex; justify-content: space-between;">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
         </form>
     </fieldset>
- <script>
-    function sub(event) {
-        event.preventDefault();  // Prevent default form submission
-        
-        const username = document.getElementById("username").value.trim();
-        const password = document.getElementById("password").value.trim();
 
-        if (username === "" || password === "") {
-            alert("Please fill in both Username and Password.");
-            return;
+    <!-- JS -->
+    <script>
+        function sub(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (username === "" || password === "") {
+                alert("Please fill in both Username and Password.");
+                return;
+            }
+
+            // Redirect if filled
+            window.location.href = "Homepage.html";
         }
+    </script>
 
-        // Redirect only if both fields are filled
-        window.location.href = "Homepage.html";
-    }
-</script>
 </body>
 </html>
