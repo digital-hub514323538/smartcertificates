@@ -189,21 +189,32 @@
 
             </fieldset>
         </form>
-       <script>
+    <script>
     function sub(event) {
         event.preventDefault();  // Prevent default form submission
-        
-        const username = document.getElementById("username").value.trim();
-        const password = document.getElementById("password").value.trim();
 
-        if (username === "" || password === "") {
-            alert("Please fill in both Username and Password.");
+        const fname = document.getElementById("fname").value.trim();
+        const lname = document.getElementById("lname").value.trim();
+        const dob = document.getElementById("dob").value;
+        const mobile = document.getElementById("mobile").value.trim();
+
+        if (!fname || !lname || !dob || !mobile) {
+            alert("Please fill in all fields.");
             return;
         }
 
-        // Redirect only if both fields are filled
+        // Optional: Check if mobile number is exactly 10 digits
+        const mobileRegex = /^\d{10}$/;
+        if (!mobileRegex.test(mobile)) {
+            alert("Please enter a valid 10-digit mobile number.");
+            return;
+        }
+
+        // Redirect if all fields are valid
         window.location.href = "Homepage.html";
     }
+</script>
+
 </script>
     </body>
 </html>
