@@ -189,12 +189,21 @@
 
             </fieldset>
         </form>
-        <script>
-          function sub(event) {
-    event.preventDefault();  // Prevent form from submitting normally
-    window.location.href = "Homepage.html";
-}
+       <script>
+    function sub(event) {
+        event.preventDefault();  // Prevent default form submission
+        
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-        </script>
+        if (username === "" || password === "") {
+            alert("Please fill in both Username and Password.");
+            return;
+        }
+
+        // Redirect only if both fields are filled
+        window.location.href = "Homepage.html";
+    }
+</script>
     </body>
 </html>
