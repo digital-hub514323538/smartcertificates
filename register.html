@@ -1,117 +1,93 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Smart Certificates Registration</title>
-        <style>
-            body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background-color: #020229;
-                margin: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                flex-direction: column;
-            }
-        
-            h1 {
-                color: #333;
-                margin-bottom: 20px;
-            }
+<head>
+    <title>Smart Certificates Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #020229;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
 
-            h3 {
-                margin-bottom: 20px;
-                color: #050505;
-            }
-        
-            form {
-                width: 100%;
-                max-width: 400px;
-            }
-        
-            fieldset {
-                border: 1px solid #ccc;
-                border-radius: 10px;
-                padding: 30px;
-                background-color: #d0d5d5;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-        
-            legend {
-                font-size: 1.2em;
-                font-weight: bold;
-                color: #030303;
-                padding: 0 10px;
-            }
-        
-            label {
-                display: block;
-                margin-top: 15px;
-                color: #333;
-                font-weight: 500;
-            }
-        
-            input[type="text"],
-            input[type="date"],
-            input[type="tel"] {
-                width: 100%;
-                padding: 10px;
-                margin-top: 5px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                box-sizing: border-box;
-                font-size: 14px;
-            }
-        
-            .gender-group {
-                margin-top: 10px;
-                display: flex;
-                gap: 15px;
-                align-items: center;
-            }
-        
-            .gender-group label {
-                font-weight: normal;
-            }
-        
-            button {
-                width: 45%;
-                padding: 10px;
-                margin-top: 20px;
-                border: none;
-                border-radius: 5px;
-                font-size: 14px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            }
-        
-            button:first-of-type {
-                background-color: #6c757d;
-                color: white;
-                margin-right: 4%;
-            }
-        
-            button:first-of-type:hover {
-                background-color: #5a6268;
-            }
-        
-            button:last-of-type {
-                background-color: #007bff;
-                color: white;
-            }
-        
-            button:last-of-type:hover {
-                background-color: #0056b3;
-            }
-                /* 
-        HEADER SECTION
-        */
+        h3 {
+            margin-bottom: 20px;
+            color: #050505;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 30px;
+            background-color: #d0d5d5;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            width: 45%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:first-of-type {
+            background-color: #6c757d;
+            color: white;
+            margin-right: 4%;
+        }
+
+        button:first-of-type:hover {
+            background-color: #5a6268;
+        }
+
+        button:last-of-type {
+            background-color: #007bff;
+            color: white;
+        }
+
+        button:last-of-type:hover {
+            background-color: #0056b3;
+        }
+
         .header {
             display: flex;
             align-items: center;
             padding: 20px 40px;
             position: absolute;
             top: 0;
-           left: 0;
+            left: 0;
         }
 
         .logo img {
@@ -152,69 +128,65 @@
                 margin-right: 0;
                 margin-bottom: 10px;
             }
-
-            .gender-group {
-                flex-direction: column;
-                align-items: flex-start;
-            }
         }
-        </style>
-    </head>
-    <body>
+    </style>
+</head>
+<body>
 
-          <!-- HEADER -->
-         <div class="header">
-             <div class="logo">
-                 <img src="logo.jpeg" alt="Website Logo">
-             </div>
-            <div class="site-title">Smart Certificates</div>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Website Logo">
         </div>
-        <form>
-            <fieldset>
-                <h3 align="center">Registration</h3>        
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="fname">
-        
-                <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="lname">
-        
-                <label for="dob">DOB:</label>
-                <input type="date" id="dob" name="dob">
-        
-                <label for="mobile">Mobile No:</label>
-                <input type="tel" id="mobile" name="mobile" maxlength="10">
-                
-                <button type="reset">Reset</button>
-               <button type="submit" onclick="sub(event)">Submit</button>
+        <div class="site-title">Smart Certificates</div>
+    </div>
 
-            </fieldset>
-        </form>
+    <!-- REGISTRATION FORM -->
+    <form>
+        <fieldset>
+            <h3 align="center">Registration</h3>
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="mobile">Mobile No:</label>
+            <input type="tel" id="mobile" name="mobile" maxlength="10" pattern="\d{10}" required>
+
+            <button type="reset">Reset</button>
+            <button type="submit" onclick="sub(event)">Submit</button>
+        </fieldset>
+    </form>
+
+    <!-- VALIDATION SCRIPT -->
     <script>
-    function sub(event) {
-        event.preventDefault();  // Prevent default form submission
+        function sub(event) {
+            event.preventDefault();
 
-        const fname = document.getElementById("fname").value.trim();
-        const lname = document.getElementById("lname").value.trim();
-        const dob = document.getElementById("dob").value;
-        const mobile = document.getElementById("mobile").value.trim();
+            const fname = document.getElementById("fname").value.trim();
+            const lname = document.getElementById("lname").value.trim();
+            const dob = document.getElementById("dob").value;
+            const mobile = document.getElementById("mobile").value.trim();
 
-        if (!fname || !lname || !dob || !mobile) {
-            alert("Please fill in all fields.");
-            return;
+            if (!fname || !lname || !dob || !mobile) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            const mobileRegex = /^\d{10}$/;
+            if (!mobileRegex.test(mobile)) {
+                alert("Please enter a valid 10-digit mobile number.");
+                return;
+            }
+
+            window.location.href = "Homepage.html";
         }
+    </script>
 
-        // Optional: Check if mobile number is exactly 10 digits
-        const mobileRegex = /^\d{10}$/;
-        if (!mobileRegex.test(mobile)) {
-            alert("Please enter a valid 10-digit mobile number.");
-            return;
-        }
-
-        // Redirect if all fields are valid
-        window.location.href = "Homepage.html";
-    }
-</script>
-
-</script>
-    </body>
+</body>
 </html>
