@@ -237,13 +237,21 @@
       <div class="site-title">Smart Certificates</div>
     </div>
 
+    <!-- LOGIN / SIGNUP CONTAINER -->
     <div class="container" id="container">
       <div class="sign-up">
         <form>
           <h1>Create Account</h1>
           <input type="text" placeholder="Name" required />
           <input type="password" placeholder="Password" required />
-          <input type="number" placeholder="Mobile No" max=10 required />
+          <input
+            type="tel"
+            id="mobile"
+            placeholder="Mobile No"
+            maxlength="10"
+            pattern="\d{10}"
+            required
+          />
 
           <button id="otp" class="otp-btn" type="button" onclick="sendOTP()">Send OTP</button>
 
@@ -319,6 +327,13 @@
 
       function signup() {
         event.preventDefault();
+        const mobile = document.getElementById("mobile").value;
+
+        if (!/^\d{10}$/.test(mobile)) {
+          alert("Please enter a valid 10-digit mobile number.");
+          return;
+        }
+
         alert("Sign Up clicked");
       }
 
